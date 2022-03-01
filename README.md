@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://github.com/abizmo/single-price-grid-component](https://github.com/abizmo/single-price-grid-component)
+- Live Site URL: [https://abizmo.github.io/single-price-grid-component/](https://abizmo.github.io/single-price-grid-component/)
 
 ## My process
 
