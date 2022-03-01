@@ -14,4 +14,10 @@
   --ff-regular: 'Karla', sans-serif;
   --fw-regular: 400;
   --fw-bold: 700;
+
+  @media(min-width: 40rem) {
+    --fs-smaller: 1rem;
+    --fs-small: 1.125rem;
+    --fs-larger: 1.75rem;
+  }
 }

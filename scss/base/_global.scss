@@ -1,9 +1,11 @@
 body {
   background-color: var(--clr-neutral-light);
+  display: grid;
   font-family: var(--ff-regular);
   font-size: var(--fs-medium);
   letter-spacing: -0.01em;
   line-height: normal;
+  place-items: center;
 }
 
 h1 {

@@ -14,6 +14,13 @@
   --fw-regular: 400;
   --fw-bold: 700;
 }
+@media (min-width: 40rem) {
+  :root {
+    --fs-smaller: 1rem;
+    --fs-small: 1.125rem;
+    --fs-larger: 1.75rem;
+  }
+}
 
 /* Box sizing rules */
 *,
@@ -95,10 +102,12 @@ select {
 }
 body {
   background-color: var(--clr-neutral-light);
+  display: grid;
   font-family: var(--ff-regular);
   font-size: var(--fs-medium);
   letter-spacing: -0.01em;
   line-height: normal;
+  place-items: center;
 }
 
 h1 {
@@ -143,11 +152,22 @@ div {
   margin: 0 auto;
   max-width: min(100vw - 4rem, 40rem);
   overflow: hidden;
+  padding: 0;
+}
+@media (min-width: 42rem) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .container > div:not(:first-child) {
   padding-bottom: 1.5rem;
   padding-top: 1.75rem;
+}
+@media (min-width: 42rem) {
+  .container > div:not(:first-child) {
+    padding: 2.5rem;
+  }
 }
 
 .hero {
@@ -163,6 +183,12 @@ div {
 }
 .hero p {
   color: var(--clr-neutral-dark);
+}
+@media (min-width: 42rem) {
+  .hero {
+    grid-column: span 2;
+    padding: 2.5rem;
+  }
 }
 
 .subscription {
@@ -186,11 +212,17 @@ div {
   border: none;
   border-radius: 0.25rem;
   color: white;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   margin-top: 2rem;
   padding: 1rem;
   width: 100%;
+  transition: all 300ms ease;
+}
+.subscription button:hover {
+  box-shadow: 0 0.2rem 2rem -0.5rem rgba(0, 0, 0, 0.32);
+  transform: translate(0, -0.1rem);
 }
 
 .why-us {
@@ -203,7 +235,7 @@ div {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
 }

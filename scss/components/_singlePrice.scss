@@ -5,11 +5,19 @@
   margin: 0 auto;
   max-width: min(100vw - 4rem, 40rem);
   overflow: hidden;
+  padding: 0;
+
+  @media (min-width: 42rem) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .container>div:not(:first-child) {
   padding-bottom: 1.5rem;
   padding-top: 1.75rem;
+  @media(min-width: 42rem) {
+    padding: 2.5rem;
+  }
 }
 
 .hero {
@@ -27,6 +35,11 @@
 
   & p {
     color: var(--clr-neutral-dark);
+  }
+
+  @media (min-width: 42rem) {
+    grid-column: span 2;
+    padding: 2.5rem;
   }
 }
 
@@ -53,11 +66,18 @@
     border: none;
     border-radius: .25rem;
     color: white;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
     padding: 1rem;
     width: 100%;
+    transition: all 300ms ease;
+
+    &:hover {
+      box-shadow: 0 .2rem 2rem -.5rem hsla( 250 45% 0% / 32%);
+      transform: translate(0, -.1rem);
+    }
   }
 }
 
